@@ -1,0 +1,71 @@
+<app-menu></app-menu> <!-- Composant Menu -->
+
+<div class="container my-5">
+  <h1 class="text-center mb-4">Galerie de la Tribu Einyvrsgtheirgtvn</h1>
+
+  <div class="row">
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="card">
+        <img src="./assets/images/Einyvrsgtheirgtvn5.png" class="card-img-top" alt="Description de Einyvrsgtheirgtvn 1">
+        <div class="card-body">
+          <p class="card-text">Voici une image artistique représentant une tribu traditionnelle de l'époque de l'Empire du Einyvrsgtheirgtvn. Elle montre des membres de la tribu dans des tenues historiques maliennes, s'engageant dans diverses activités telles que la musique traditionnelle, la danse et l'artisanat. Le cadre est un village avec des huttes en chaume, entouré du paysage sahélien. La scène est vibrante, mettant en valeur un riche héritage culturel avec des détails comme des bijoux traditionnels, des instruments et des vêtements.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="card">
+        <img src="./assets/images/Einyvrsgtheirgtvn4.png" class="card-img-top" alt="Description de Einyvrsgtheirgtvn 2">
+        <div class="card-body">
+          <p class="card-text">Voici une image représentant des guerriers anciens de l'Empire du Einyvrsgtheirgtvn en pleine bataille. Cette scène dynamique et puissante montre les guerriers en tenue de combat traditionnelle, équipés de boucliers, de lances et d'autres armes historiques. Le fond de l'image présente un champ de bataille avec un paysage aride, typique de la région du Sahel, capturant l'intensité et le courage des guerriers ainsi que leur compétence au combat et leur formation stratégique.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="card">
+        <img src="./assets/images/Einyvrsgtheirgtvn3.png" class="card-img-top" alt="Description de Einyvrsgtheirgtvn 3">
+        <div class="card-body">
+          <p class="card-text">Voici une image représentant des guerrières de l'ancien Empire du Einyvrsgtheirgtvn, équipées pour le combat. Elles sont vêtues de tenues traditionnelles de guerrières, complétées par des armures, des casques, et des armes telles que des lances et des épées. La scène se déroule dans un paysage ouvert, caractéristique de la région du Sahel, mettant en avant la force, l'habileté et la détermination de ces guerrières. L'image illustre leur préparation au combat, soulignant leur rôle important dans la défense et les combats de la tribu.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Section Contact -->
+  <div id="contact" class="container mt-5 mb-5">
+    <h2 class="text-center mb-4">Contactez-Nous</h2>
+    <div class="card p-4 shadow">
+      <form (ngSubmit)="onSubmitContact()" class="form-contact">
+        <div class="mb-3">
+          <label for="name" class="form-label">Nom</label>
+          <input type="text" class="form-control" id="name" [(ngModel)]="contactName" name="name" placeholder="Votre nom" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" [(ngModel)]="contactEmail" name="email" placeholder="Votre email" required>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea class="form-control" id="message" rows="4" [(ngModel)]="contactMessage" name="message" placeholder="Votre message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Envoyer</button>
+      </form>
+    </div>
+  </div>
+
+
+  <div class="modification-log">
+    <h2>Journal des Modifications</h2>
+    <div *ngIf="modifications.length > 0">
+      <ul>
+        <li *ngFor="let modification of modifications">{{ modification }}</li>
+      </ul>
+    </div>
+    <div *ngIf="modifications.length === 0">
+      <p>Aucune modification enregistrée.</p>
+    </div>
+    <div class="cip">
+      <p>Mon CIP : {{ cip }}</p>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer> <!-- Composant Footer -->

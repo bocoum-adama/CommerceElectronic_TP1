@@ -1,0 +1,28 @@
+<app-menu></app-menu> <!-- Composant Menu -->
+<div class="container gallery-page">
+  <div class="row mb-4">
+    <div class="col-lg-8">
+      <img src="./assets/images/Einyvrsgtheirgtvn2.png" class="img-fluid" alt="Le Roi">
+    </div>
+    <div class="col-lg-4">
+      <p class="image-description" style="text-align: center; margin-top: 3em; margin-left: 3em">Voici une image captivante qui dépeint une scène impressionnante à l'intérieur du palais royal de l'ancien Empire du Einyvrsgtheirgtvn, un empire qui fut jadis un centre de richesse, d'apprentissage et de puissance en Afrique. Au cœur de cette image, le roi trône majestueusement, incarnant la dignité et l'autorité royales. Son trône, un chef-d'œuvre d'artisanat, est orné d'or fin et entouré de symboles royaux africains traditionnels qui témoignent de la grandeur et de l'influence de sa dynastie.
+
+        La tenue du roi est un spectacle en soi, caractérisée par des motifs complexes et des couleurs vives, symbolisant son statut et son importance. Chaque détail de sa tenue, des perles rares à la texture des tissus, raconte une histoire de prestige, de tradition et de pouvoir.
+
+        La salle du trône, un écrin d'histoire et de culture, est richement ornée d'art africain. Les murs sont tapissés de textiles exquis, chaque pièce reflétant le savoir-faire et l'art de l'époque. Des artefacts historiques, symboles de conquêtes et de relations commerciales étendues, sont exposés avec fierté, rappelant la prospérité économique et le rayonnement culturel de l'Empire du Einyvrsgtheirgtvn.
+
+        Cette scène n'est pas seulement une représentation du pouvoir royal, mais aussi un hommage à l'héritage culturel africain. Elle capture l'essence d'une période où l'art, la politique et la culture s'entremêlaient, formant le tissu d'une civilisation remarquable. C'est un aperçu fascinant d'une ère révolue, invitant le spectateur à admirer et à réfléchir sur la grandeur historique de l'Empire du Einyvrsgtheirgtvn.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6 col-md-3 mb-3" *ngFor="let image of otherImages">
+      <img [src]="image.url" class="img-fluid" [alt]="image.description" (click)="selectedImage = image">
+    </div>
+  </div>
+  <div *ngIf="selectedImage" class="row">
+    <div class="col-12">
+      <p class="image-description">{{ selectedImage.description }}</p>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer> <!-- Composant Footer -->

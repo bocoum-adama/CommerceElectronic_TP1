@@ -1,0 +1,13 @@
+/* Styles spécifiques à la section Contact */
+.form-contact .btn-primary {
+  background-color: #0056b3;
+  border: none;
+}
+
+.form-contact .btn-primary:hover {
+  background-color: #00397c;
+}
+
+.form-contact label {
+  font-weight: bold;
+}
